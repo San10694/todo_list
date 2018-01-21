@@ -2,34 +2,31 @@ import { StackNavigator, TabNavigator } from "react-navigation";
 import { TaskDetails } from "./../containers/TaskDetails";
 import TaskList from "../containers/TaskList";
 
-import styles from "./styles";
-
-
 const Tab = TabNavigator(
   {
     ALL: {
       screen: TaskList,
-      navigationOptions: { tabBarLabel: 'ALL' }
+      navigationOptions: { tabBarLabel: "ALL" }
     },
     OVERDUE: {
       screen: TaskList,
-      navigationOptions: { tabBarLabel: 'OVERDUE' }
+      navigationOptions: { tabBarLabel: "OVERDUE" }
     },
     CLOSED: {
       screen: TaskList,
-      navigationOptions: { tabBarLabel: 'CLOSED' }
+      navigationOptions: { tabBarLabel: "CLOSED" }
     },
     NEW: {
       screen: TaskList,
-      navigationOptions: { tabBarLabel: 'NEW' }
+      navigationOptions: { tabBarLabel: "NEW" }
     },
     TODO: {
       screen: TaskList,
-      navigationOptions: { tabBarLabel: 'TODO' }
+      navigationOptions: { tabBarLabel: "TODO" }
     }
   },
   {
-    initialRouteName: "ALL",
+    initialRouteName: "NEW",
     tabBarPosition: "top",
     animationEnabled: true,
     tabBarOptions: {

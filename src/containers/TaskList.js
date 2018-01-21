@@ -77,7 +77,11 @@ class TaskList extends React.Component {
   render() {
     const { navigate } = this.props.navigation;
     if (!this.props.taskList) {
-      return;
+      return (
+        <View>
+          <Text>Loading...</Text>
+        </View>
+      );
     }
     return (
       <Container>
